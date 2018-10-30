@@ -38,6 +38,9 @@ class RegisterViewController: UIViewController {
                 print(error!)
             } else {
                 print("Successful")
+                
+//                Sending user to chat, (Special self before segue because of closure)
+                self.performSegue(withIdentifier: "goToChat", sender: self)
             }
         }
         
